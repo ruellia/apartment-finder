@@ -1,5 +1,9 @@
 python-craigslist>=1.0.3
+websocket-client
+packaging
+simplegeneric>=0.8.1
+appdirs
 sqlalchemy
 python-dateutil
 ipython
-slackclient
+slackclient>=1.0.5
