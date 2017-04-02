@@ -35,6 +35,7 @@ def post_listing_to_slack(sc, listing):
     :param sc: A slack client.
     :param listing: A record of the listing.
     """
+    sc.api_call("channels.create", name=settings.SLACK_CHANNEL, validate=False)
     try:
         desc = "{0} | {1} | {2} | {3} | <{4}>".format(listing["area"], listing["price"], listing["bart_dist"], listing["name"], listing["url"])
         sc.api_call(

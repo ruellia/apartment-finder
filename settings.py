@@ -95,7 +95,7 @@ CRAIGSLIST_HOUSING_SECTION = 'apa'
 SLEEP_INTERVAL = 20 * 60 # 20 minutes
 
 # Which slack channel to post the listings into.
-SLACK_CHANNEL = "#housing"
+SLACK_CHANNEL = "#quikrent"
 
 # The token that allows us to connect to slack.
 SLACK_TOKEN = config.get('slack_token')
@@ -104,15 +104,3 @@ SLACK_TOKEN = config.get('slack_token')
 BEDROOMS = config.get('bed')
 
 BATHROOMS = config.get('bath')
-
-# Any private settings are imported here.
-try:
-    from private import *
-except Exception:
-    pass
-
-# Any external private settings are imported from here.
-try:
-    from config.private import *
-except Exception:
-    pass
