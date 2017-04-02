@@ -1,4 +1,5 @@
 from scraper import do_scrape
+from imp import reload
 import settings
 import time
 import sys
