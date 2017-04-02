@@ -124,7 +124,7 @@ def do_scrape():
 
     print("{}: Got {} results".format(time.ctime(), len(all_results)))
 
-    # Create #quikrent channel if it does not already exist.
+    # Create channel to post to if it does not already exist.
     sc.api_call("channels.create", name=settings.SLACK_CHANNEL, validate=False)
 
     # Post each result to slack.
