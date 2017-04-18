@@ -19,12 +19,12 @@ MAX_PRICE = config.get('max_price')
 # The Craigslist site you want to search on.
 # For instance, https://sfbay.craigslist.org is SF and the Bay Area.
 # You only need the beginning of the URL.
-CRAIGSLIST_SITE = 'sfbay'
+CRAIGSLIST_SITE = config.get('craigslist_site')
 
 # What Craigslist subdirectories to search on.
 # For instance, https://sfbay.craigslist.org/eby/ is the East Bay, and https://sfbay.craigslist.org/sfc/ is San Francisco.
 # You only need the last three letters of the URLs.
-AREAS = ["eby", "sby", "nby"]
+AREAS = config.get('areas')
 
 # A list of neighborhoods and coordinates that you want to look for apartments in.  Any listing that has coordinates
 # attached will be checked to see which area it is in.  If there's a match, it will be annotated with the area
@@ -61,12 +61,12 @@ BOXES = {
 # one of the boxes you defined, it will be checked to see if the neighborhood name it was listed under matches one
 # of these.  This is less accurate than the boxes, because it relies on the owner to set the right neighborhood,
 # but it also catches listings that don't have coordinates (many listings are missing this info).
-NEIGHBORHOODS = ["berkeley north", "berkeley", "rockridge", "adams point", "oakland lake merritt", "cow hollow", "piedmont", "pac hts", "pacific heights", "lower haight", "palo alto", "richmond / seacliff", "haight ashbury", "alameda", "twin peaks", "noe valley", "bernal heights", "glen park", "potrero hill", "dogpatch"]
+NEIGHBORHOODS = config.get('neighborhoods')
 
 ## Transit preferences
 
 # The farthest you want to live from a transit stop.
-MAX_TRANSIT_DIST = 2 # kilometers
+MAX_TRANSIT_DIST = config.get('max_transit_distance') # kilometers
 
 # Transit stations you want to check against.  Every coordinate here will be checked against each listing,
 # and the closest station name will be added to the result and posted into Slack.
@@ -85,7 +85,7 @@ TRANSIT_STATIONS = {
 # For instance, https://sfbay.craigslist.org/search/apa find apartments for rent.
 # https://sfbay.craigslist.org/search/sub finds sublets.
 # You only need the last 3 letters of the URLs.
-CRAIGSLIST_HOUSING_SECTION = 'apa'
+CRAIGSLIST_HOUSING_SECTION = config.get('craigslist_housing_section')
 
 ## System settings
 
